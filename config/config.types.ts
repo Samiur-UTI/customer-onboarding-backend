@@ -12,5 +12,12 @@ export interface ApplicationConfig {
   db: {
     url: string;
   };
+  redis: {
+    url: string;
+  };
   context: APP_CONTEXT;
+  jwt: {
+    secret: string;
+    expiresIn: string;
+  };
 }

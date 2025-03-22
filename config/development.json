@@ -1,6 +1,11 @@
 {
     "app": {
+      "port": 5000,
       "apiBaseUrl": "http://localhost:5000"
     },
-    "context": "development"
+    "context": "development",
+    "jwt": {
+      "secret": "development-secret-key",
+      "expiresIn": "1h"
+    }
   }
