@@ -1,6 +1,27 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: customer_app
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://user:password@postgres:5432/customer_db?schema=public
+      - APP_PORT=5000
+      - API_BASE_URL=http://localhost:5000 # Update to GCP external IP after deployment
+      - REDIS_URL=redis://:redis_password@redis:6379
+      - JWT_SECRET=production-secret-key
+    ports:
+      - "5000:5000" # Map host port 5000 to container port 5000
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - app_network
+    restart: unless-stopped
+
   postgres:
     image: postgres:15
     container_name: customer_postgres
