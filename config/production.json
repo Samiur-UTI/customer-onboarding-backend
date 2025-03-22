@@ -1,7 +1,7 @@
 {
     "app": {
       "port": 5000,
-      "apiBaseUrl": "https://api.customer-onboarding.com"
+      "apiBaseUrl": "http://34.174.59.17:5000"
     },
     "context": "production",
     "jwt": {
