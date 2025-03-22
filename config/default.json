@@ -1,0 +1,11 @@
+{
+    "app": {
+      "name": "Customer Onboarding API",
+      "port": 5000,
+      "apiBaseUrl": "http://localhost:5000"
+    },
+    "db": {
+      "url": "postgresql://user:password@localhost:5432/customer_db?schema=public"
+    },
+    "context": "development"
+  }

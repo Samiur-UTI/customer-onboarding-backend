@@ -1,0 +1,7 @@
+{
+    "app": {
+      "port": 5000,
+      "apiBaseUrl": "https://api.customer-onboarding.com"
+    },
+    "context": "production"
+  }

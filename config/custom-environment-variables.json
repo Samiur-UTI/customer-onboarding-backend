@@ -1,0 +1,10 @@
+{
+    "app": {
+      "port": "APP_PORT",
+      "apiBaseUrl": "API_BASE_URL"
+    },
+    "db": {
+      "url": "DATABASE_URL"
+    },
+    "context": "NODE_ENV"
+  }

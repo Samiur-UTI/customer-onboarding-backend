@@ -1,0 +1,6 @@
+{
+    "app": {
+      "apiBaseUrl": "http://localhost:5000"
+    },
+    "context": "development"
+  }
