@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { AppConfigService } from './modules/common/app.config.service';
+import { HttpExceptionFilter } from './modules/common/filter/http-exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -15,6 +16,7 @@ async function bootstrap() {
   const appConfig = appConfigService.getAppConfig();
 
   app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalFilters(new HttpExceptionFilter());
 
   app.enableCors({
     origin: 'http://localhost:3000', // Adjust based on env if needed
