@@ -6,5 +6,12 @@
     "db": {
       "url": "DATABASE_URL"
     },
-    "context": "NODE_ENV"
+    "context": "NODE_ENV",
+    "redis": {
+      "url": "REDIS_URL"
+    },
+    "jwt": {
+      "secret": "JWT_SECRET",
+      "expiresIn": "JWT_EXPIRES_IN"
+    }
   }

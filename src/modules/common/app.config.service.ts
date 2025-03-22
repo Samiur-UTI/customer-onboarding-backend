@@ -25,4 +25,8 @@ export class AppConfigService {
   public getDbUrl(): string {
     return this.applicationConfig.db.url;
   }
+
+  public getJwtConfig(): { secret: string; expiresIn: string } {
+    return this.applicationConfig.jwt;
+  }
 }

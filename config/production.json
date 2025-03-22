@@ -3,5 +3,9 @@
       "port": 5000,
       "apiBaseUrl": "https://api.customer-onboarding.com"
     },
-    "context": "production"
+    "context": "production",
+    "jwt": {
+      "secret": "production-secret-key",
+      "expiresIn": "1h"
+    }
   }
